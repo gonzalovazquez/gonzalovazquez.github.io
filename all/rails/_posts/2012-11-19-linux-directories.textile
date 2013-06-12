@@ -1,0 +1,114 @@
+---
+
+layout : post
+
+title : Understanding Directories in Linux
+
+---
+
+h2. {{page.title}}
+
+p(publish_date). 19 November 2012
+
+
+The main purpose of a directory is to store other files. Directories in Linux are not hard to understand. Mainly you just have to get used to the terminology and the structure.
+
+h4. Directory Terminology
+
+* *Parent Director*: A directory file that created sub-directory or "child directory"
+
+* *Sub-Directory*: A directory file directly dependent on previous or "parent" directory
+
+* A period "." before the filename denotes a hidden file
+
+* Filenames and directories are case sensitive
+
+h4. File Concepts in Unix/Linux
+
+When ever you issue the command ls or ls-l you will recieve back an output similar to the one below. Lets understand what each character means.
+
+<pre>-rw-r---- 1 segurag profs 4 2012-11-09 11:00 abc.txt </pre>
+
+The first character "-" indicated that this file is a regular file
+
+The other outputs is who owns the file, file size (in bytes), date/time of creation or modification and file name.
+
+<pre>drwxr-s--- 2 segurag profs 4096 2012-11-06 03:12 mydir </pre>
+
+The first character "d" indicates that this file is a "directory file".
+
+Note: In Unix/Linus, even the hardware devices are intepreted by Unix/Linux OS as a file. All hardware devices are stored in the /dev directory
+
+In this example we are going to issue a command and analyze the output.
+
+*Command*:
+
+<pre> ls -l /dev/pts/2 </pre>
+
+*Output*:
+
+<pre>crw--w---- 1 segurag tty 136, 2 2012-11-11 14:27 /dev/pts/2 </pre>
+
+This first character "c" indicates that this file is a "device file". On many different Unix/Linux systems, the character "b" or "c" represent device files.
+
+
+h4. Working with Directories
+
+The Linux OS has a "hierarchinal" file system, which means that directories can contain other directories or files in a "downward" fashion which resembles a pyramid or tree.
+
+*Files Pathnames:*
+
+* Absolute Pathname refers to the location reference starting with from root "/".
+
+* Relative Pathname refers to the location reference relative another location.
+
+Note: 
+( . ) = Represents current directory 
+( .. ) = Represents parent directory 
+
+ 
+
+h4. Visual Hierarchy Representation
+
+I am going to demonstrate how the hierarchy works when we make a directory.
+
+Command: 
+
+<pre>mkdir -p outside/inside/1/2/3</pre>
+
+Graphic Representation:
+
+<p>myhome directory (~)</p>
+<p>&nbsp; |</p>
+<p>&nbsp;outside</p>
+<p>&nbsp; &nbsp; &nbsp; |</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;inside</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+-- 1</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+-- 2</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+-- 3</p>
+<p>&nbsp;</p>
+
+h4. Directory Structure: Terminology
+
+The Linux OS has a "hierarchical" file system, which means that directories can contain other directories or files in a "downward" fashion which resembles a pyramid or tree.
+
+Example of a tree diagram of a directory structure:
+
+<p>&nbsp; &nbsp; / (root)</p>
+<p>&nbsp; &nbsp; |</p>
+<p>&nbsp; --------------------------------</p>
+<p>&nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; |</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;bin &nbsp; &nbsp; &nbsp; &nbsp;dev &nbsp; &nbsp; &nbsp; home &nbsp; &nbsp; &nbsp;etc</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; -----------------</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp;|</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; A &nbsp; &nbsp; &nbsp;B &nbsp; &nbsp; &nbsp; &nbsp;C</p>
+<p>&nbsp;</p>
+
+
+In the Linux and Unix OS, the storage device such as the hard disk contains directories. Directories are actually files that are used to store other files. This allows the storage device to be organized and prevent confusion.
+
+The root directory (denoted by a slash "/") is the starting directory for the hard disk (or each partition created in a hard disk). The root directory is automatically created when the hard disk (or any hard disk partition) is created and formatted.

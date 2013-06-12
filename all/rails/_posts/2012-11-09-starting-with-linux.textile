@@ -1,0 +1,30 @@
+---
+
+layout : post
+
+title : An Introduction to Linux.
+
+---
+
+h2. {{page.title}}
+
+p(publish_date). 9 November 2012
+
+
+<p>In this blog post we are going to take a look at bash scripting which can be achieved by simply launching Command Prompt on Windows or Terminal on Mac.<br></p>
+
+h4. Why do we want to learn command line programming?
+
+<p>Well to put it simply. It is the language you are going to use to communicate with a server, because usually servers are running Linux.<br> Here are some reason you may want to learn to use Linux:</p>
+<ul>
+	<li> Not only does Unix/Linux have a Graphical User Interface (GUI), but it can separate the GUI into levels (layers) that provide more flexibility. For example, specifying different window managers for window behaviour, and specify different Desktop Environments.</li>
+	<li> Since Unix evolved with ArpaNet (and later, the Internet), it was designed for networking (eg. TCP/IP transports). Linux obviously inherited these characteristics from Unix. Also, many utilities(commands) were created to take advantage of the Internet (eg. ssh, sftp, irc, web-servers, etc). </li>
+	<li>The Unix/Linux operating systems have been recognised for many years as a cost-effective and efficient platform developing software(porting developed software to other OS platforms).</li>
+</ul>
+
+h4. What is mobile server?
+
+<p>The Mobile server is a computer system that runs the Linux operating system. Users can connect to this Linux server via an application called "Secure Shell" or "SSH" that provides a secure connection to the server from ANY computer system via the Internet. </p>
+
+
+

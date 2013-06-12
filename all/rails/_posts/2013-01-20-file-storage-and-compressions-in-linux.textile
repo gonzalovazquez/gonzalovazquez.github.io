@@ -1,0 +1,78 @@
+---
+
+layout : post
+
+title : File Storage and Compression in Linux
+
+---
+
+h2. {{page.title}}
+
+p(publish_date). 06 December 2012
+
+
+h4. Checking File Storage
+
+Since on Linux you dont have a GUI, checking hardrive storage becomes a little bit complicated, however it's a very important skill to master since when you are over looking a server, making sure it has enough memory is crucial.
+
+<pre>df –h</pre>
+
+Either a system administrator or an unpriviledged user can see how much disk space is available on their Unix or Linux system by using the df (Disk Free) command.
+
+<pre>du -h </pre>
+
+You can also check how much space is being used in your home directory.
+
+h4. Compression
+
+Another important tool that we have access is compression. Compressing files is very important and we have access to two formats: *TAR* and *ZIP*
+
+To compress a file type the following command:
+
+<pre>tar -cf out-file.tar (filename)</pre>
+<pre>gzip out-(filename).tar</pre>
+
+
+To decompress we do the following:
+
+<pre> gunzip out-file.tar.gz ^C </pre>
+
+<pre>tar xfvz out-file.tar.gz</pre>
+
+h4. Tape Archive File Compression (Tarballs)
+
+The tar utility stands for “tape archive” and was commonly used on older Unix systems to backup files on tape. Although new storage devices are available today, this utility is still used.
+
+<pre>tar -cf (new_compression name).tar (file names to be compressed) </pre>
+
+h4. ZIPPED TARBALLS
+
+To compress those “archived” files in order to save space, you can use the “zip” utility. Let’s zip the tarball called “out.tz” to create a “zipped-tarball” that we will call “out.tz.gz”.
+
+Issue the following command:
+
+<pre> gzip(filename).tar </pre>
+
+The file gets renamed to
+
+ *(filename).tar.gz*
+
+h4. RESTORING A “ZIPPED” TARBALL
+
+Usually, you obtain “zipped tarballs” from CDs, copy them from other directory paths on your system, or download them from the Internet.
+
+You generally follow the same procedure as before, but in the reverse order and using Unix commands.
+
+# 1. Unzip to create “tarball”
+
+# 2. Decompress “tarball” to obtain original files
+
+To Unzip, you use the “gunzip” utility. To obtain the “tarball”, issue the following command:
+
+<pre> gunzip (filename).tar.gz </pre>
+
+This recovers (unzips) the original “tarball” called out.tz
+
+Now, to obtain the orginal files (out.1, out.2, out.3), issue the following command:
+
+<pre> tar -xvf (filename).tar </pre>

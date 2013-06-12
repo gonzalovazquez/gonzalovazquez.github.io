@@ -1,0 +1,87 @@
+---
+
+layout : post
+
+title : Popular Linux Commands
+
+---
+
+h2. {{page.title}}
+
+p(publish_date). 14 November 2012
+
+
+Since I usually work with Linux in the command line, I have made a list of the most common commands that you will encounter in a day-to-day basis.
+
+Clear the screen
+
+<pre> clear </pre>
+
+Show current directory path
+
+<pre> pwd </pre>
+
+List directory
+
+<pre>ls</pre>
+
+List directory with permissions
+
+<pre>ls -l</pre>
+
+List directory with hidden files
+
+<pre>ls -a</pre>
+
+Print the username
+
+<pre>whoami</pre>
+
+Display all users currently logged into the server
+
+<pre>who</pre>
+
+Online Help Command
+
+<pre> man </pre>
+
+Specify details of the directory itself
+
+<pre>ls -ld</pre>
+
+List all directories with the beginning of the letter "x"; you can change
+the x to search which ever letter you want.
+
+<pre> ls -ld x*</pre>
+
+Allows you to not only display current directory's contents but any subdirectory contents contained in the current directory.
+
+<pre> ls -R example </pre>
+
+Creates an empty file
+
+<pre> touch </pre>
+
+Moves on file to another location, it can also be used to rename exisiting files
+or directories.
+
+<pre> mv [current location] [new location] </pre>
+
+Copy files, directories to another directory
+
+<pre> cp [current location] [new location] </pre>
+
+Remove/Delete entire directory.
+
+<pre> rmdir [directory name] </pre>
+
+If the directory is not empty you may have to give is the flag of -r for recursive and -f for force.
+
+<pre> rm -rf [directory name] </pre>
+
+Display contents of a file
+
+<pre> cat </pre>
+
+Those are the most basic commands that you will need. Try to memorize them or you can always come back here for reference.
+
