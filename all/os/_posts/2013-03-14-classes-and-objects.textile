@@ -1,0 +1,48 @@
+---
+
+layout : post
+
+title : Classes & Objects in Java
+---
+
+h2. {{page.title}}
+
+p(publish_date). 14 March 2013
+
+h4. What is a class? 
+
+A class is the blueprint that is used for instantiation (creating) objects into the computer’s memory.
+
+h4. What is an object? 
+
+It is a self-contained entity that exists in memory that contains all of the code that exists in the .class file that it was created from.
+
+So remember a class is our code that exists in a .class file on the hard-drive and an object is our code that exists in a .class file on the hard-drive and an object is our code that exists in memory and interacts with the JVM to run our program.
+
+Now within our object we have access to instance variables and methods to allow us to interact with it. 
+
+h4. What is an instance variable? 
+
+An instance variable is a particular piece of information that describes some part of our object. (Remember, an object is just an instantiation of a class into memory) In other words, the instance variable tells about the object and a method lets the object do work.
+
+Let’s look at the following class and identify our class, object and instance variable.
+
+<pre name="code" class="java">
+import javax.swing.JOptionPane;
+
+public class Example
+{
+   public static void main (String [] args)
+   {
+    JOptionPane myIO = new JOptionPane();
+    myIO.showMessageDialog(null, "Hello World");
+   }
+}
+</pre>
+
+In the first line we tell the compiler where to find the class called "JOptionPane", following that we declare a class called "Example".
+
+Inside "Example", we have a method called "main". As we progress, inside "main" we instantiate a class from JOptionPane into an object and we give it a reference of "myIO".
+
+Finally, since "myIO" is a type of JOptionPane, we can invoke the method called "showMessageDialog" and pass in two parameters null and a String "Hello World".
+

@@ -1,0 +1,47 @@
+---
+
+layout : post
+
+title : The Stack in Java
+
+---
+
+h2. {{page.title}}
+
+p(publish_date). 16 February 2013
+
+The JVM divided the memory into following sections.
+
+# Heap
+# Stack
+# Code
+# Static
+
+The stack is a very organized area in the computer’s memory where we store local variables. A local variable is a variable created in the currently executing code block. The variables are stored by the thread of execution, meaning from the first line to the last one.
+
+Let me show you how it works. First we are going to look at the program below and store the local variable in the stack as the computer would.
+
+<pre name="code" class="java">
+public class Stack
+{
+    public static void main (String [] args)
+    {
+    int length = 5;
+    int width = 10;
+
+    int area = length * width;
+    System.out.println("The area of the rectangle is " + area );
+    }
+}
+</pre>
+
+On the stack side it would look like this:
+
+h4. Stack
+
+* length  = 5
+* width  = 10
+* area   = 15
+* PrgCtr
+
+First we store the local variables the we hit "System.out.print" and we exit the stack and the class.

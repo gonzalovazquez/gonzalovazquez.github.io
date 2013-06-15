@@ -1,0 +1,21 @@
+---
+
+layout : post
+
+title : Casting in Java
+
+---
+
+h2. {{page.title}}
+
+p(publish_date). 23 February 2013
+
+Now what happens if we want to store an double in a integer. The program will give us an error because the double wont fit in the integer so the solution? Casting.
+
+The following we are casting a double into an integer.
+
+<pre name="code" class="java">
+	int myVar = (int) myDouble;
+</pre>
+
+When casting from one type to another, always use the type that you are converting to as the cast.

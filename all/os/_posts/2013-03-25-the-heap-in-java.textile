@@ -1,0 +1,21 @@
+---
+
+layout : post
+
+title : The Heap in Java
+---
+
+h2. {{page.title}}
+
+p(publish_date). 25 March 2013
+
+To remind you in the stack we store our variables however we store our objects in a different called the heap. The heap is an area where we can create and destroy objects as needed. The stack is organized and neat and it’s counterpart the heap it disorganized and messy.
+
+One last problem. How do we access the heap if it’s messy. We use a thing called reference variables. When we instantiate an object, we assigned it a reference variable and that is how we access it.
+
+In conclusion:
+
+* All variables are stored on the stack.
+* Objects are stored on the heap.
+* Primitive variables contain the value assigned to them ( on the stack ).
+* Reference variable contain the address of the object that it points to.

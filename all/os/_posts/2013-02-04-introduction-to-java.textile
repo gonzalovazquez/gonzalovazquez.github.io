@@ -1,0 +1,58 @@
+---
+
+layout : post
+
+title : An Introduction to Java
+
+---
+
+h2. {{page.title}}
+
+p(publish_date). 04 February 2012
+
+I am in the process of learning JAVA. The following will serve as a reference/study guide as I learn this amazing new language.
+
+The following are the rules of programming that has professor has taught me:
+
+h4. Rich’s Five Rules of Computer Programming  
+
+* Computer Programming is easy but humans make it hard.
+* Simple is almost always better.
+* Organized always is better.
+* Train yourself to step back and consider the problem.
+* Think outside the box.
+* In order to understand a language like JAVA first we must understand how it works.
+
+h4. Java - The Process
+
+*Source Code -> Compiler -> ByteCode -> JVM -> Machine Code -> OS*
+
+The java compiler takes the source code and converts it into bytecode which it stores in a .class file on your hard drive. The JVM reads the bytecode from the .class files, translates it on the fly( in real time) into machine code when we run the program.
+
+Know that we understand how JAVA works how do we start developing for it ?
+
+h4. Java - Developing
+
+We have three editions for java development.
+
+* Java SE - Standard Edition
+* Java EE - Enterprise Edition
+* Java ME - Micro Edition
+
+For standard developing we fill focus on Java SE.
+
+h4. Java SE - The Components
+
+Contained within the Java SE we have the JDK ( Java Development Kit ).
+
+The JDK contains :
+
+* JRE ( Java Runtime Environment )
+* Our Compiler
+
+The JRE contains:
+
+* The Java Virtual Machime
+* The Java API
+
+Now that we understand how Java works and it’s components let move into writing some Java.

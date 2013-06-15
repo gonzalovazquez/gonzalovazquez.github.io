@@ -1,0 +1,30 @@
+---
+
+layout : post
+
+title : Strings in Java
+---
+
+h2. {{page.title}}
+
+p(publish_date). 17 March 2013
+
+Strings, which are widely used in Java programming, are a sequence of characters. In the Java programming language, strings are objects.
+
+Just remember, a string is NOT a primitive data type but rather is an object that contains a string of characters.
+
+Let’s take a look at it in a class.
+
+<pre name="code" class="java">
+import javax.swing.JOptionPane;
+
+public class MakingStrings
+{
+   public static void main (String [] args)
+   {
+    String outputString = "some text";
+    JOptionPane.showMessageDialog(null, myString);
+    // Will print " some text " .
+   }
+}
+</pre>

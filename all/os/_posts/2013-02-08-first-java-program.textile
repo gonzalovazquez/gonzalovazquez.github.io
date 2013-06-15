@@ -1,0 +1,48 @@
+---
+
+layout : post
+
+title : First Java Program
+
+---
+
+h2. {{page.title}}
+
+p(publish_date). 08 February 2013
+
+Requirements:
+
+* Java SE
+* Dr. JAVA 
+
+
+Let's make our first program. Look at the code below, and I will explain line by line.
+
+<pre name="code" class="java">
+public class HelloWorld
+{
+    public static void main (String [] args)
+     {
+         System.out.println("Hello World");
+     }
+}
+</pre>
+
+Let me explain what we wrote above. 
+
+Line 1 is our  Class Header.
+
+Everything between line 2 to line 6 is our class.
+
+Inside our class on line 3 we have our method header.
+
+In between line 4 and line 6 we have our method.
+
+Keep in mind:
+
+* Always start your class with capitals and save it as the same name (Eg. HelloWorld.java)
+* Every Java program has at least one class.
+* A class is the building block of object oriented programming.
+* Every piece of code exists inside a class.
+* Case is very important in java.
+* Spaces are also important in java.

@@ -1,0 +1,57 @@
+---
+
+layout : post
+
+title : Java Variables
+
+---
+
+h2. {{page.title}}
+
+p(publish_date). 14 February 2013
+
+Variables are useful to store information that later we can use. 
+In order to use a variable first we must declare them. 
+
+We start with the type of variable followed by the variable name and it’s value.
+
+The following are some variables that we can use.
+
+<pre name="code" class="java">
+public class Variable
+{
+    public static void main (String [] args)
+    {
+      byte variable1;
+      // Can store -128 to 128
+      short variable2;
+      // Can store -32768 to 32768
+      int variable3;
+      // Can store 2147483684 to 2147483684
+      long variable4;
+      //Can store really huge numbers
+      float variable5;
+      // Can store large decimal range
+      double variable6;
+      // Can store huge decimal range
+     }
+}
+</pre>
+
+The following class will make the use of variables to print the area of a rectangle.
+
+<pre name="code" class="java">
+public class Area
+{
+    public static void main (String [] args)
+    {
+    int length = 5;
+    int width = 10;
+
+    int area = length * width;
+    System.out.println("The area of the rectangle is " + area );
+    }
+}
+</pre>
+
+If we see under "System.out.println" we can see how we let the variables do the work.
