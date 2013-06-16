@@ -8,7 +8,7 @@ layout: nil
  <link href="http://gonzalovazquez.github.com/atom.xml" rel="self"/>
  <link href="http://gonzalovazquez.github.com/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://danhixon.github.com/</id>
+ <id>http://gonzalovazquez.github.com/</id>
  <author>
    <name>Gonzalo Vazquez</name>
    <email>gonzalo.segura1@gmail.com</email>
