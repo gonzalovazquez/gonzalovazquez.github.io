@@ -1,0 +1,76 @@
+---
+
+layout : post
+
+title :  Boolean and If Statement in Java
+
+---
+
+h2. {{page.title}}
+
+p(publish_date). 07 May 2013
+
+Booleans are very powerful. They can either evaluate as true or false. 
+
+h4. Comparison Operators:
+
+* < less than
+
+* > greater than
+
+* <= less than or equal to
+
+* >= greater than or equal to
+
+* == equal to
+
+* != equal to
+
+* ! = not
+
+h4. Logic Operators:
+
+* && AND
+
+* || OR
+
+* ! NOT
+
+Now that we know booleans, comparison and logic operators we can put them all together to create an if statement.
+
+The following are examples of if statements.
+
+*if (myNumber > 10 && myNumber < 20)*
+
+If myNumber is greater than 10 AND if myNumber is less than 20 then wrote code.
+
+*if (myNumber > 10 || myNumber < 20)*
+
+If myNumber is greater than 10 OR if myNumber is less than 20 then wrote code.
+
+Remember that if statements allow us to test for certain conditions within our code using boolean expressions.
+
+Let see how that looks in code.
+
+<pre name="code" class="java">
+if( //boolean expression  )
+    {
+    //code that runs if the boolean expression
+    //evaluates to true.
+    }
+else if ( //boolean expression #2  ) 
+    {
+    //code that runs if boolean
+    //expression evaluates to false
+    // and boolean expression #2 true
+    }
+else
+    {
+    //code that runs if both are false
+    }
+</pre>
+
+That is a simple if statement in java code. 
+
+If statements can get very lengthy and complex so we can use something called a switch statement to ease our typing.
+

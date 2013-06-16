@@ -1,0 +1,28 @@
+---
+
+layout : post
+
+title : Java - The Scanner Class 
+
+---
+
+h2. {{page.title}}
+
+p(publish_date). 04 May 2013
+
+The scanner class is used to for getting user input as well.
+
+<pre name="code" class="java">
+import java.util.Scanner;
+ 
+public class GettingInput
+{
+  public static void main (String [] args)
+  {
+    System.out.println("Please type an integer");
+    Scanner scan = new Scanner (System.in);
+    int myInt = scan.nextInt();
+    System.out.println("You typed "+ myInt);
+  }
+}
+</pre>

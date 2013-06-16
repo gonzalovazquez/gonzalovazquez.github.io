@@ -1,0 +1,52 @@
+---
+
+layout : post
+
+title : Returns in a Java Function
+---
+
+h2. {{page.title}}
+
+p(publish_date). 14 April 2013
+
+First we are going to build a calling class called Rectangle with a method called showArea. Pay close attention to the syntax of this method and see the difference.
+
+<pre name="code" class="java">
+public class Rectangle
+{
+  public int length;
+  public int width;
+ 
+  public int showArea()
+  {
+  int area = length * width;
+  //Return the result
+  return area;
+  }
+}
+</pre>
+
+Now that we are returning a value "area", we have to make our main class able to capture it. 
+
+How do we do this? Like so.
+
+<pre name="code" class="java">
+public class testRectangle
+{
+   public static void main (String [] args)
+   {
+   Rectangle myObj = new Rectangle();
+   //Set the values of the rectangle
+   myObj.length = 45;
+   mObj.width = 28;
+   //We make a local variable to store the return
+   int area = myObj.showArea();
+   //Output
+   System.out.println("The area is "+ area);
+   }
+}
+</pre>
+
+This way we are able to capture the return value from our calling class and set it to the local variable called area
+
+We are also able to pass variables into our methods not only return variables.

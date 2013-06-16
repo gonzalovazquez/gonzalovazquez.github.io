@@ -1,0 +1,69 @@
+---
+
+layout : post
+
+title : Java - OOP
+---
+
+h2. {{page.title}}
+
+p(publish_date). 03 April 2013
+
+Why code in OPP vs Procedural?
+
+Object Oriented Programming code can be changed quickly and since it’s based on several classes one does not have to re-write the whole program but rather just change classes. 
+
+Now, stay with me. This may get a bit messy.
+
+There are two kind of classes on Java.
+
+* Special Classes : They pass to the JVM in order to start and require a main method.
+
+* Regular Classes : Do not need a main method.
+
+Now you may be asking yourself? 
+
+How can we run a class without a main method. Well we can instantiate it as an object in our code and then read/write to the instance variables and call the methods from other objects.
+
+Let’s put this to the test. The first class I am going to write won’t have a main method.
+
+<pre name="code" class="java">
+public class ExternalClass
+{
+  public String name;
+  public int age;
+  
+  public void myMethod()
+  {
+  String status = "love"
+  System.out.println("My name is " + name + "and I am" + age + "year's old");
+  System.out.println("and I + status + "you");
+  }
+}
+</pre>
+
+A quick note about scope. Variables have scope. Scope is the portion of the code that a variable exists within. Meaning the String "love" called status cannot be accessed outside of the method.
+
+Now let’s build our main class that will instantiate our ExternalClass.
+
+<pre name="code" class="java">
+public class MyClass
+{
+  public static void main ( String args [] )
+  {
+  //Instantiate ExternalClass 
+  ExternalClass myObj = new ExternalClass();
+  //Access variables of ExternalClass
+  myObj.name = "Gonzalo"
+  myObj.age = 25;
+  //Run the method
+  myObj.myMethod();
+  // Would output:
+  // My name is Gonzalo and I am 25 year's old
+  }
+}
+</pre>
+
+Congratulations!!!
+
+You just wrote your first object oriented program.

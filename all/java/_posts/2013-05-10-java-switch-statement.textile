@@ -1,0 +1,59 @@
+---
+
+layout : post
+
+title :  Java's Switch Statement
+
+---
+
+h2. {{page.title}}
+
+p(publish_date). 10 May 2013
+
+The following is an example of a switch statement.
+
+<pre name="code" class="java">
+
+import javax.swing.JOptionPane;
+
+public class Switch
+{
+   public static void main (String [] args)
+   {
+   String myInput = JOptionPane.showInputDialog("Enter a number");
+   int myInt = Integer.parseInt(myInput);
+   //Switch Statement
+   switch(myInt)
+    {
+   case 1:
+     JOptionPane.showMessageDialog(null,"You chose 1");
+     break;
+   case 2:
+     JOptionPane.showMessageDialog(null,"You chose 2");
+     break;
+   case 3:
+     JOptionPane.showMessageDialog(null,"You chose 3");
+     break;
+   default:
+     JOptionPane.showMessageDialog(null,"Choose");
+     break;
+    }
+  }
+}
+</pre>
+
+It may seem a bit complicated but it’s actually pretty simple and very helpful. 
+
+Let me go line by line and explain what is happening.
+
+* Line 6 : We ask the user to input a number.
+
+* Line 7: We convert the String into a number.
+
+* Line 9: In the switch statement we evaluate myInt against the different cases.
+
+* Line 11: If the number is 1 then the output message would be “You chose 1”. That repets itself until one condition is true. However if the number isn’t 1 or 2 or 3 then it executes the default.
+
+* Line 30: The default would run if the conditions above evaluate to false and it will output “Choose”.
+
+If we were to write this as an if statement it would be very long and complex. Switch statement allow us to type less and it makes more sense when you look at your code afterwards.

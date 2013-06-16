@@ -1,0 +1,52 @@
+---
+
+layout : post
+
+title : Arguments in a Java Function
+---
+
+h2. {{page.title}}
+
+p(publish_date). 17 April 2013
+
+This is our calling class.
+
+<pre name="code" class="java">
+import javax.swing.JOptionPane;
+
+public class Pirate
+{
+   public void pirateSpeak(String mySentence)
+   {
+   mySentence = mySentence + " you scurvy dog!");
+   myOutput.showMessageDialog(null, mySentence);
+   }
+}
+</pre>
+
+Let me explain what is happening here. 
+Our function "pirateSpeak" accepts a String called "mySentence".
+
+Inside the function we concatenate the String by adding "you scury dog".
+
+Now lets write our main class.
+
+<pre name="code" class="java">
+import javax.swing.JOptionPane;
+
+public class PirateGame
+{
+   public static void main (String [] args)
+   {
+   Pirate myPirate = new Pirate();
+   myPirate.pirateSpeak("Hello,");
+   // This will output:
+   // Hello, you scurvy dog!
+   }
+}
+</pre>
+
+Now we know how to return and pass an argument to methods in Java. 
+
+It is a very powerful feature and once we write more complicated code everything will start making sense. 
+

@@ -1,0 +1,28 @@
+---
+
+layout : post
+
+title :  String -> Integer in Java
+
+---
+
+h2. {{page.title}}
+
+p(publish_date). 24 April 2013
+
+In order to convert the string into a variable all we need to do is the following:
+
+<pre name="code" class="java">
+String myInput = JOptionPane.showInputDialog(null, "Enter number of miles");
+
+int miles = Integer.parseInt(myInput);
+//Converts String to Integer
+</pre>
+
+Just by doing this conversion we are able to take any string and convert it into an integer and apply any kind of math we want.
+
+What if we want to convert it to a double. Same logic.
+
+<pre class="code" class="java">
+double miles = Double.parseDouble(myInput);
+</pre>

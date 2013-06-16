@@ -1,0 +1,34 @@
+---
+
+layout : post
+
+title : Java - JOptionPane (showInputDialog)
+
+---
+
+h2. {{page.title}}
+
+p(publish_date). 24 April 2013
+
+If you where you write this class into your code editor and run it you would be greeted with a box and a user input line. Very neat indeed. Let me show you the code.
+
+<pre name="code" class="java">
+import javax.swing.JOptionPane;
+
+public class GetUserInput
+{
+   public static void main (String [] args)
+   {
+   String myInput = JOptionPane.showInputDialog(null, "Type your name");
+   JOptionPane.showMessageDialog(null,"Your name is " + myInput);
+   //Output: Whatever the user typed plus the string Your name is.
+   }
+}
+</pre>
+
+Now we have the capacity of asking user for information, very very powerful indeed. 
+
+However their is a catch with this method. 
+
+JOptionPane will take whatever the user typed and convert it into a string, so if we want to maybe accept an integer it won't be possible unless we convert it back to an integer from a string.
+
