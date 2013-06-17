@@ -1,0 +1,145 @@
+---
+
+layout : post
+
+title :  Loops - Java
+---
+
+h2. {{page.title}}
+
+p(publish_date). 18 May 2013
+
+Lets say you want to repeat a code block in your code several time before your program ends. What are you going to use? This is were loops come into play. A loop always us to run part of our program over and over again.
+
+There are three kind of loops, while loops, do while loops & for loops.
+
+Lets look at one by one.
+
+h4. While Loop:
+
+Checks for condition for a certain boolean condition at the top before the loops executes. However if the condition starts out false, it is possible that the while loop will never even run once.
+
+<pre name="code" class="java">
+while(condition == true)
+{
+//code that gets executed every time
+//the loops iterates
+}
+</pre>
+
+h4. Do While Loop:
+
+If we want to make sure the loop run at least once we use the do while loop. The do while loop control condition is evaluated at the bottom, after the body executes, and the loop continues until the test is false also know as bottom checking.
+
+<pre name="code" class="java">
+do
+{
+ //statement that executes inside the loop
+}while(condition == true);
+</pre>
+
+h4. For Loop:
+
+It’s a fancy while loop. It initializes, evaluates and increments all in one step.
+
+<pre name="code" class="java">
+
+for(int count = 0; count < 10; count++)
+{
+  System.out.print(count);
+}
+</pre>
+Lets try them all together. The following program demonstrates the three different loops and prints out the numbers 0 to 9.
+
+<pre name="code" class="java">
+public class TestingLoops
+{
+  public static void main (String [] args)
+  {
+   int counter = 0; 
+   
+   //While Loop
+ 
+   while(counter < 10)
+   {
+     System.out.print(counter);
+     counter = counter + 1;
+   }
+   
+   //Do while loop
+ 
+   do
+   {
+     System.out.print(counter);
+     counter = counter + 1;
+   }while(counter < 10);
+      
+   //For Loop   
+ 
+   for(counter = 0; counter<=10; counter++)
+   {
+     System.out.print(counter);
+   } 
+   
+  }  
+}
+</pre>
+
+Great job! For me loops have always been a complicated subject to grasp, so make sure you keep practicing loops. Next we are going to talk about nested loops. Nested loops are loops inside of loops. Look at the following code and I will explain afterwards.
+
+h4. Nested Loop
+
+A nested loop is just like a truth table. The first loop will run and then move to the inside loop and not exit until the condition of in the inside loop is meet. After is meet it moves to the outer loops and runs again and again until the condition in the outer loop is meet.
+
+Look at the code below.
+
+<pre name="code" class="java">
+for (int a=0; a < 3;a++)
+ {
+   for (int b=0; b < 3; b++)
+   {
+      System.out.println("Value of a:" + a + "-Value of b:" + b);
+   }
+}
+</pre>
+
+Now look at the table below for explanation of what is happening in our loop.
+
+<img alt="truth table" height="185" src="/images/truthtable.png" width="530" /></p>
+
+The program runs and hits the loop A on Line 1 and sets the value to zero. Then it goes into loop B and runs four times until b is larger than three. After that it exits and goes to loop A again and sets the value to one. Then it runs loop B again and so for and so on after loop A value is larger than three.
+
+Lets look at a real example. Look at the code below and tell me what you think is going to print out.
+
+<pre name="code" class="java">
+public class TimesTable {
+
+  public static void main (String[] args)
+	{
+	for( int i = 1; i < =10; i++)
+	   {
+	     for (int j =1; j< =10; j++)
+	     {
+		System.out.print(i*j + "\t");
+	     }
+	    System.out.println();
+	    }		
+	}
+}
+</pre>
+
+I hope you came to this conclusion. The program above prints out a handy table from 1 to 100. 
+
+<pre name="code" class ="java">
+1	2	3	4	5	6	7	8	9	10	
+2	4	6	8	10	12	14	16	18	20	
+3	6	9	12	15	18	21	24	27	30	
+4	8	12	16	20	24	28	32	36	40	
+5	10	15	20	25	30	35	40	45	50	
+6	12	18	24	30	36	42	48	54	60	
+7	14	21	28	35	42	49	56	63	70	
+8	16	24	32	40	48	56	64	72	80	
+9	18	27	36	45	54	63	72	81	90	
+10	20	30	40	50	60	70	80	90	100	
+</pre>
+

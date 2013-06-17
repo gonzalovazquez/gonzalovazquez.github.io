@@ -1,0 +1,18 @@
+---
+
+layout : post
+
+title :  Method Signature in Java
+---
+
+h2. {{page.title}}
+
+p(publish_date). 18 May 2013
+
+A method signature refers to the elements in a method.
+
+For example:
+
+public int method1 (int arg1, int arg2) shares the same method signature to public int method1(int arg1) and public int method1(String arg1, int arg2).
+
+The reason that method signature is important is because we are going to use this to overload methods.

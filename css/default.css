@@ -131,10 +131,10 @@ h1 a:hover { color:#fba919 ;}
 .orange { color: #fba919; }
 
 
-a.pink:hover { border: solid 2px #f5a2c6;padding:1px; text-decoration:none;  }
+a.pink:hover { color: #212121; background-color:#f5a2c6;text-decoration:none;  }
 a.green:hover { color:#212121; background-color:#23af4c;text-decoration:none; }
 a.blue:hover { color:#212121; background-color:#0383c9;text-decoration:none; }
-a.orange:hover { color:#fba919;  padding:1px; border: solid 2px #fba919; text-decoration:none; }
+a.orange:hover { color:#212121;  padding:1px; background-color: #fba919; text-decoration:none; }
 .slogan a { padding:3px; line-height: 2.5em; }
 
 .commentslink { margin-bottom: 35px;display:block;border-bottom:solid 1px #dadada;padding-bottom:25px; }
@@ -186,6 +186,7 @@ width:670px;
 
 #header {
 margin:0;
+margin-bottom: -40px;
 
 }
 
@@ -205,7 +206,7 @@ font-size:1.5em;
 font-weight:700;
 letter-spacing:-1px;
 line-height:1.2em;
-margin:-15px 0 60px 0px;
+margin:-5px 0 60px 0px;
 }
 div.slogan div { display:inline;}
 

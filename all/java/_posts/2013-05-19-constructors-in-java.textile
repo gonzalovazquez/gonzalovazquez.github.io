@@ -1,0 +1,56 @@
+---
+
+layout : post
+
+title :  Constructors Methods in Java
+---
+
+h2. {{page.title}}
+
+p(publish_date). 19 May 2013
+
+When we are writing a class, we can create a special method called a constructor method that runs once when an object is first instantiated. However constructor method are special. 
+
+They have to have the same name as the class name. It is the only method that you will ever Capitalize. We can pass arguments into a constructor. 
+
+<pre name="code" class="java">
+public class Constructor
+{
+  private int month;
+  private int day;
+  public Constructor(int num1, int num2)
+  {
+  setMonth(num1);
+  setDay(num2);
+  }
+  //Overloading Constructor
+  public Constructor()
+  {}
+  //Setters
+  public void setMonth(int inMonth)
+  {
+  if(inMonth > 12)
+   {
+   //error
+   }else{
+   month = inMonth;
+   }
+  }
+  public void setDay(int inDay)
+  {
+  day = inDay;
+  }
+}
+</pre>
+
+On our calling class we can pass something like this.
+
+<pre name="code" class="java">
+
+Constructor obj1 = new Constructor(10,28);
+
+</pre>
+
+Let me explain in detail. On the class Constructor we have are passing two numbers to the constructor class and setting those to integers to out setter methods to check for errors. As well we have an empty constructor in the bottom that simply allows the user to not pass any arguments and the program will still run. 
+
+

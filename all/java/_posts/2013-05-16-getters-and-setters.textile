@@ -1,0 +1,146 @@
+---
+
+layout : post
+
+title :  Getters and Setters in Java
+---
+
+h2. {{page.title}}
+
+p(publish_date). 16 May 2013
+
+Setters are used to validate data and getters are used to return data.
+
+h4. Setters:
+
+When creating a setter method we use the word “set” and the variable we want to set.
+We need to pass it the same value of the original variable.
+
+
+h4. Getters:
+
+Since we cannot access the private variable we use the getter method to return the variable.
+Here is our scenario:
+
+We are asking our user to give us three values. Their name, their month of birth and their day of birth. However, what would happen if the user gives us a number larger than 12 for the month? Our program would crash. We would use a setter to prevent that from happen and stop the code from running if we get an invalid value.
+
+Let me show you who it works. First we are going to build our calling class.
+
+<pre name="code" class="java">
+
+public class Birthday{
+ 
+  public String name;
+  private int month;
+  public int day;
+ 
+  //Setter
+  public void setMonth (int inMonth)
+  {
+    if(inMonth > 0 && inMonth < 13)
+    {
+    month = inMonth;
+    }
+    else
+    {
+      //throw custom error
+    }
+  }
+  //Getter
+  public int getMonth()
+  {
+   return month; 
+  }
+  //Print the month depending on the integer passed.
+ 
+  public void getFriendlyBirthday(){
+    String changeMonth = "";
+    switch(month)
+    {
+      case 1:
+      changeMonth = "January";
+      break;
+      case 2:
+      changeMonth = "February";
+      break;
+      case 3:
+      changeMonth = "April";
+      break;
+      case 4:
+      changeMonth = "March";
+      break;
+      case 5:
+      changeMonth = "May";
+      break;
+      case 6:
+      changeMonth = "June";
+      break;
+      case 7:
+      changeMonth = "July";
+      break;
+      case 8:
+      changeMonth = "August";
+      break;
+      case 9:
+      changeMonth = "September";
+      break;
+      case 10:
+      changeMonth = "October";
+      break;
+      case 11:
+      changeMonth = "Novemeber";
+      break;
+      case 12:
+      changeMonth = "December";
+      break;
+    }   
+   System.out.println( name +"'s birthday is on " + changeMonth+" "+ day); 
+  }  
+}
+</pre>
+
+Okay, let me explain the class above line by line.
+
+Line 4 : We have a private integer, meaning the external class cannot see it.
+
+Line 8 : We have our setter method which we are passing an integer called inMonth.
+
+Line 10: Inside here we create an if statement to check if what we are receiving is between 1 and 12 and if it is then we make our inMonth variable equal to our private variable.
+
+Line 14: However if it does not then we can throw an error and stop the program.
+
+Line 36: In here we have a simple switch statement that checks the variable month and depending and the number it will change the string to whatever the month corresponds to the number. 
+
+Now lets make our main class.
+
+<pre name="code" class="java">
+
+public class TestBirthday{
+  
+  public static void main (String [] args)
+  {   
+    Birthday myObj = new Birthday();
+    
+    myObj.name = "Gonzalo";
+    //Setter
+    myObj.setMonth(10);
+    //Getter
+    System.out.println(myObj.getMonth());
+    myObj.day = 1;  
+    myObj.getFriendlyBirthday(); 
+  }
+}
+</pre>
+
+Now what is happening here?
+
+Line 5 : We are instantiating a class called Birthday and giving it an instance variable of myObj.
+
+Line 9 : We pass the number 10 into our setter method. It will check if it’s between 1 and 12 and if that evaluates to true then we will make it equal to our private int month.
+
+Line 13 : Here we call our switch statement it will take the number 10 check it against the conditions and it will output : Gonzalo’s birthday is on October 1.
+
+Good job! Now we know how to make our code more proactive and we are able to handle errors from users. 
+
+Now, it may be a bit overwhelming what we just learn however read it over and it will make more sense the more you practice it and start coding yourself!
+

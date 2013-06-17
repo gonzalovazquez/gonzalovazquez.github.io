@@ -1,0 +1,51 @@
+---
+
+layout : post
+
+title :  Try & Catch Statement in Java
+---
+
+h2. {{page.title}}
+
+p(publish_date). 13 May 2013
+
+A try statement is used to catch exceptions that might be thrown as your program executes. You should use a try statement whenever you use a statement that might throw an exception That way, your program won’t crash if the exception occurs.
+
+<pre name="code" class="java">
+try
+   {
+  //risky code in here
+   }
+  catch(Exception err)
+   {
+  //code to handle any exceptions
+  finally
+   }
+  //code that runs no matter what
+   }
+  </pre>
+
+h4. Inside try:
+
+If any of the code inside the try code-block causes an exception, execution immediately jumps to the catch code-block and passes the exception object as an argument.
+
+h4. Inside catch:
+
+We write the code in this block to handle the error gracefully or to throw an exception.
+
+h4. Inside finally:
+
+No matter what happens, the finally block of code always runs.
+
+Another quick thing I want to mention is you can make custom errors. You have access to a class code Illegal Argument Expection that will stop the Java program and throw an error. 
+
+Following is the syntax:
+
+<pre name="code" class="java">
+
+IllegalArgumentException error = new IllegalArgumentException("ERROR!!");
+
+throw error;
+
+</pre>
+

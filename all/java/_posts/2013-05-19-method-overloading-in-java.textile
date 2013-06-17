@@ -1,0 +1,37 @@
+---
+
+layout : post
+
+title :  Method Overloading in Java
+---
+
+h2. {{page.title}}
+
+p(publish_date). 19 May 2013
+
+Refers to passing different amount and types of arguments to the same method. 
+
+How can we accomplish this? In the following code example I am going to write one method with three different signatures. 
+
+<pre name="code" class="java">
+public class OverloadingMethods
+    {
+      public int addNums(int num1, int num2)
+      {
+         int returnValue = num1 + num2;
+         return returnValue;
+      }
+      public int addNums(int num1, int num2, int num3)
+      {
+         int returnValue = num1 + num2 + num3;
+         return returnValue;
+      }
+      public int addNums (int num1, int num2, int num3, int num4)
+      {
+         int returnValue = num1 + num2+ num3+ num4;
+         return returnValue;
+      }
+    }
+</pre>
+
+Notice here how the methods share the same name but different method signature. This means we can either pass from two numbers to four numbers to our same method addNums and it would work.
