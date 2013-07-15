@@ -1,0 +1,27 @@
+---
+
+layout : post
+
+title : Useful Links
+
+---
+
+h2. {{page.title}}
+
+p(publish_date). 15 July 2013
+
+Like many of you, I have encountered many useful links through out the web.
+
+I am going to attempt in this post to categorize them and I will add more as I find them.
+
+h4. Dev
+
+* "JavaScript Library":http://www.javascriptoo.com/
+
+* "Secrets of the Browser Developer Tools":http://devtoolsecrets.com/
+
+* "Secrets of the Browser Developer Tools":http://devtoolsecrets.com/
+
+* "Collection of JS Best Libraries":http://www.jsdb.io/
+
+* "HTML Inspector":https://github.com/philipwalton/html-inspector
