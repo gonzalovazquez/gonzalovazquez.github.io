@@ -22,9 +22,13 @@ h4. Dev
 
 * "HTML Inspector":https://github.com/philipwalton/html-inspector
 
+* "Dev Docs":http://devdocs.io/
+
 h4. Design
 
 * "Ladda loading indicators":http://lab.hakim.se/ladda/
+
+* "Placeholder Images":http://placehold.it/
 
 h4. System Admin
 
