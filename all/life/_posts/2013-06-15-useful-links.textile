@@ -25,3 +25,21 @@ h4. Dev
 h4. Design
 
 * "Ladda loading indicators":http://lab.hakim.se/ladda/
+
+h4. System Admin
+
+* "Glances":http://nicolargo.github.io/glances/
+
+* "Phpmyadmin installation":http://www.distrogeeks.com/install-phpmyadmin-ubuntu/
+
+* "Configure PHP Dev Environment":https://netbeans.org/kb/docs/php/configure-php-environment-ubuntu.html
+
+* "Node.js on Linux":http://oodavid.tumblr.com/post/15090798307/how-to-install-node-js-on-linux
+
+* "Git on Linux Ubuntu":https://www.digitalocean.com/community/articles/how-to-install-git-on-ubuntu-12-04
+
+* "Oh-My-Zsh":https://github.com/robbyrussell/oh-my-zsh
+
+* "Bash to Zsh":http://superuser.com/questions/231735/how-do-i-change-my-default-shell-from-bash-to-zsh
+
+* "Rails Prod & Dev on Ubuntu":https://ariejan.net/2007/06/20/rails-production-server-setup-and-deployment-on-ubuntudebian/
