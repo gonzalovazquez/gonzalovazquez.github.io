@@ -1,0 +1,144 @@
+---
+
+layout : post
+
+title : Ubuntu Server - Getting Started
+
+---
+
+h2. {{page.title}}
+
+p(publish_date). 15 July 2013
+
+
+This is a tutorial to create a your own dedicated Linux server.
+
+In this post this is exactly what we are going to cover.
+* Install Ubuntu Server.
+* Install OpenSSH for remote access.
+
+Let’s get started! What do you need?
+* A computer with constant access to the internet
+* The computer must have a CD-ROM or USB port.
+* Around 3 to 4 hours for the whole installation process.
+
+h4. STEP ONE – Downloading Ubuntu Server
+
+First we are going to "download":http://www.ubuntu.com/download/server the Ubuntu Server.
+
+Once you have downloaded the .ISO you have an option of burning it to a "CD":https://help.ubuntu.com/community/BurningIsoHowto or making it into a bootable USB key. I chose to make it a "bootable usb":http://www.linuxliveusb.com/ because the installation runs faster and I don’t like spinning things.
+
+h4. STEP TWO – Installing Ubuntu Sever
+
+Now, we are going to insert the CD or the USB in the computer and boot from there.
+
+In my computer, I held down Command + F8 to bring up the Boot Menu and selected the CD-ROM or the USB key. It depends on your computer however a quick search can provide you the answer. Now, as your computer loads Ubuntu you should be presented with this screen.
+
+<img alt="intro" height="185" width="auto" src="/images/linux_installation/language.png"  />
+
+Select the language and hit enter. Following this screen you should see this: 
+
+<img alt="hello" height="185" width="auto" src="/images/linux_installation/hello.png"  />
+
+Select “Install Ubuntu Server”.
+
+You will now be prompted to detect  your keyboard layout. You can *choose no*, and then select the standard American keyboard from the list.
+
+After, you will see several loading screens detecting your hardware. These should run without any problem, however if you encounter a problem just follow the on-screen instructions. After that it’s done you will be asked for a *host name*. You can set up this name to be anything. I used 'web-server'.
+
+<img alt="server" height="185" width="auto" src="/images/linux_installation/web_server.png"  />
+
+The system will set-up a time zone. In my case I choose Atlantic. Choose the right one for you.
+Afterwards the system will detect more hardware, and you will be prompted to “partition the disk(s)”. 
+Choose *Guided - use entire disk*.
+
+<img alt="disk" height="185" width="auto" src="/images/linux_installation/disk.png"  />
+
+Following you will be asked to partition your hard drive. In my case, I only have one hard drive in my computer to I only have option to select from.
+
+<img alt="partition" height="185" width="auto" src="/images/linux_installation/partitions.png"  />
+
+It will prompt you to write the changes to the disk. Select *Yes* and hit *enter*.
+
+The installer will now format your drive and set up any partitions you selected. Afterwards the system will begin to install. It can take from ten minutes to one hour. Don’t stare at the installation. Go for a walk and come back. If the progress bar hasn’t moved in one hour then it may be frozen. Try reinstalling your computer and starting again.
+
+<img alt="process" height="185" width="auto" src="/images/linux_installation/process.png"  />
+
+Almost done!
+
+Now that the system has installed, we are going to need an account to log in.
+
+First give your *full name* and hit “Continue”. 
+
+Now give it your *username*. I used my first name. You may NOT use “root”.
+
+Next, you will be asked to provide a *password*. Try selecting a very strong password. This password will be the one you will use to gain access to your server remotely and locally.
+
+<img alt="password" height="185" width="auto" src="/images/linux_installation/password.png"  />
+
+Then re-enter your password to make sure you typed it correctly. The system will now attempt to configure the “Package Manager”.
+
+Provide it with your proxy information or leave it blank if you don’t use a proxy, and select “Continue”.
+
+<img alt="proxy" height="185" width="auto" src="/images/linux_installation/proxy.png"  />
+
+After the system will scan several servers looking for updates and configuration settings.
+
+<img alt="config" height="185" width="auto" src="/images/linux_installation/config.png"  />
+
+h4. STEP THREE – Installing SSH
+
+SSH stands for Secure Shell and it is was allows you to connect to your computer remotely. 
+
+This is an important step to read carefully.
+
+You will be presented with a screen like this. 
+
+<img alt="ssh" height="185" width="auto" src="/images/linux_installation/ssh.png"  />
+
+With your *arrows keys*, go down to OpenSSH and press the *space key*, to select the package. 
+
+Do not press Enter to select OpenSSH, if you do the installation will run without installing anything. Remember; press the space key to select OpenSSH.
+
+Afterwards you can press *Enter*. Now the system will install with the selected software, as well as other system components.
+
+<img alt="clean up" height="185" width="auto" src="/images/linux_installation/clean_up.png"  />
+
+Finally, the installation will finish. Remove the CD or usb key and hit enter. The system will reboot and you will be presented with a screen like this.
+
+<img alt="start" height="185" width="auto" src="/images/linux_installation/start.png"  />
+
+Congratulations! You have installed Ubuntu Server on your machine.
+
+h4. STEP FOUR – Updating your server
+
+First we have to login into the server. In my case, I used my Mac to log in, which is why the Terminal looks different.
+
+Type the *username* you chose followed by the *password* until you are greeted with the startup screen.
+
+<img alt="login" height="185" width="auto" src="/images/linux_installation/login.png"  />
+
+We have to make sure our server is up to date and in order to do that we type the following command:
+
+<pre name="code" class="bash">
+	sudo apt-get update && time sudo apt-get dist-upgrade
+</pre>
+
+It will ask you for your password. Type it and press enter.
+
+After you will see a huge list of the urls and then it will ask you if you want to install the available updates. Press *y* and press enter.
+
+Your system just downloaded and installed all the latest updates. This may take long depending your internet connection. 
+
+Now type:
+
+<pre name="code" class="bash">
+	sudo reboot -h
+</pre>
+
+This will reboot your server and you are finished installing all the updates.
+
+Ta da...you are done!
+
+In a consequent blog post, I am going to show you how to install Apache, MySQL and PHP.
+
