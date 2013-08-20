@@ -1,0 +1,21 @@
+---
+
+layout : post
+
+title : Rasberry Pi
+---
+
+h2. {{page.title}}
+
+p(publish_date). 20 July 2013
+
+I am very excited to announced that I am proud owner of a Rasberry Pi. I recommend this "website":"http://www.newark.com/jsp/search/productdetail.jsp?sku=43W5302&COM=raspi-group" if you are interested in purchasing one. Lets the games begin.
+
+h4. What is a Rasberry Pi?
+
+The Raspberry Pi is a credit-card sized computer that plugs into your TV and a keyboard. It’s a capable little PC which can be used for many of the things that your desktop PC does, like spreadsheets, word-processing and games. It also plays high-definition video.
+
+h4. I bought one, now what?
+
+Let's go step by step to get you running with your Raspberry. You can find a very comprehensive "guide":http://www.raspberrypi.org/wp-content/uploads/2012/04/quick-start-guide-v2_1.pdf on the Rasberry Pi website.
+

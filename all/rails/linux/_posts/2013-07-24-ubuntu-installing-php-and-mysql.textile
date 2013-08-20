@@ -1,0 +1,49 @@
+---
+
+layout : post
+
+title : Ubuntu Server - Install PHP & MySQL & Apache
+
+---
+
+h2. {{page.title}}
+
+p(publish_date). 24 July 2013
+
+Apache is one of the most popular web servers in the world. In this blog we are going to install Apache along with PHP a popular programming language and MYSQL which is an open relational dabtabase managment system. All these three make for a powerful combination and you are able to run frameworks like Wordpress.
+
+To install Apache, MySQL & PHP type the following command into your server.
+
+<pre name="code" class="bash">sudo aptitude install apache2 php5-mysql libapache2-mod-php5 mysql-server
+</pre>
+
+Following, you will be asked for two solutions. 
+
+Type Y and press Enter
+
+Next, MYSQL will ask you for a password. Do not leave empty. Type a very strong password and remember it. 
+
+Now, lets test out your server, type: 
+
+<pre name="code" class="bash">
+ifconfig | grep inet
+</pre>
+
+You shall see an IP address, make not of it. Open your browser on another computer and type the first or second ip address..usually it starts with 192.*.*.*. 
+You should see a message saying "It works!". 
+
+
+h4. Testing MySQL
+
+MySQL comes with a command line shell that you can access. Let access it.
+Type the following:
+
+<pre name="code" class="bash">
+mysql -u root -p
+</pre>
+
+You will be asked for a password, enter it and voila.
+
+Type <pre name="code" class="bash">EXIT; </pre> to exit.
+
+I will cover mysql commands in a different blog. For now, we successfully installed Apache, MYSQL and PHP. Yey!!!
