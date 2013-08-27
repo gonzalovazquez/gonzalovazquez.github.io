@@ -28,6 +28,12 @@ h4. Dev
 
 * "Sublime Text 2 Keyboard Shortcuts":http://www.ractoon.com/wp-content/uploads/2012/10/sublime_text_2_shortcuts_mac_printable_ractoon.pdf?11f46a
 
+* "Remote Pair Programming":https://floobits.com/
+
+* "Plugin for bi-directional CSS editing":http://livestyle.emmet.io/
+
+* "Bootstrap UI for Angular JS":http://angular-ui.github.io/bootstrap/
+
 h4. Design
 
 * "Ladda loading indicators":http://lab.hakim.se/ladda/
