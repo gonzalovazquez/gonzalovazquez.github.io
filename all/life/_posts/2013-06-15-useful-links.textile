@@ -34,6 +34,8 @@ h4. Dev
 
 * "Bootstrap UI for Angular JS":http://angular-ui.github.io/bootstrap/
 
+* "Sublime Colors":http://colorsublime.com/
+
 h4. Design
 
 * "Ladda loading indicators":http://lab.hakim.se/ladda/
